@@ -8,7 +8,7 @@ A single page website designed for Snap Rodent and Pest Control. The project foc
 - Service categories with visual cards
 - Simple pricing section
 - Contact form with essential fields
-- Social media section with TikTok, Instagram, and Facebook
+- Social media section with TikTok, Instagram
 - Customer reviews and before or after examples
 - Mobile responsive design
 
