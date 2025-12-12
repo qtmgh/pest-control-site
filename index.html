@@ -17,17 +17,19 @@
         <a href="#hero">Home</a>
         <a href="#services">Services</a>
         <a href="#pricing">Pricing</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
       </div>
-      <a class="btn" href="tel:5622775497">Call Now</a>
+      
     </nav>
   </header>
 
   <main>
     <section id="hero" class="section hero">
       <div>
-        <div class="tag">Pests gone in 24 hours — Re-Service is free if they’re not.</div>
-        <h1>Same-day Inspection. No Long Contracts. Family-Owned.</h1>
-        <p class="lead">Lock in the $75 inspection today and jump the line for emergency rodent, insect, and specialty pest cleanups.</p>
+        <div class="tag">Pests. Gone. — re-service is free if they’re not.</div>
+        <h1>Same-day inspection. No long contracts.</h1>
+        <p class="lead">SnapTrap offers a solution for any household pest problem.​ Rodent trapping and exclusion. Cleaning, sanitation. ants, spiders, roaches, bed bugs, silverfish.</p>
         <div class="langs">English | Español</div>
         <div class="social-inline">
           <a class="social-tt" href="https://www.tiktok.com/@tiktok" target="_blank" rel="noreferrer" aria-label="TikTok">
@@ -106,14 +108,63 @@
             <div class="chip">House flies</div>
           </div>
           <p class="lead" style="font-size:14px; margin-top:10px;">Note: More time between visits means more pest activity. Single follow-up for a specific issue is available; full property re-treats are not included.</p>
-          <div style="margin-top:14px;">
-            <a class="btn" href="tel:5622775497">Schedule Call</a>
-          </div>
+          
         </div>
       </div>
       <div class="card" style="margin-top:16px;">
         <h4>Specialized treatments (additional charges)</h4>
         <p class="lead" style="font-size:14px; margin-top:6px;">Fleas/Ticks, Bed Bugs, Termites, Bees, Mites, Pantry Pests.</p>
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <h4>FAQs</h4>
+        <details style="margin-top:8px;">
+          <summary style="cursor:pointer; font-weight:700;">Do you guarantee results?</summary>
+          <p class="lead" style="font-size:14px; margin-top:6px;">Yes—if pests return between visits, we re-service the specific issue for free.</p>
+        </details>
+        <details style="margin-top:8px;">
+          <summary style="cursor:pointer; font-weight:700;">Is the inspection applied to service?</summary>
+          <p class="lead" style="font-size:14px; margin-top:6px;">The $75 inspection is credited to your first treatment when you proceed.</p>
+        </details>
+        <details style="margin-top:8px;">
+          <summary style="cursor:pointer; font-weight:700;">What areas do you treat?</summary>
+          <p class="lead" style="font-size:14px; margin-top:6px;">Interior, exterior perimeter, entry points, attics, and crawlspaces as needed.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="hours" class="section">
+      <div class="card">
+        <h3>Operating Hours</h3>
+        <p class="lead" style="font-size:14px; margin-top:8px;">Same-day and after-hours available—call to check slot availability.</p>
+        <div class="hours-grid">
+          <div class="hours-item"><span>Mon</span><span>9:00 AM – 5:00 PM</span></div>
+          <div class="hours-item"><span>Tue</span><span>9:00 AM – 5:00 PM</span></div>
+          <div class="hours-item"><span>Wed</span><span>9:00 AM – 5:00 PM</span></div>
+          <div class="hours-item"><span>Thu</span><span>9:00 AM – 5:00 PM</span></div>
+          <div class="hours-item"><span>Fri</span><span>8:00 AM – 6:00 PM</span></div>
+          <div class="hours-item"><span>Sat</span><span>8:00 AM – 6:00 PM</span></div>
+          <div class="hours-item"><span>Sun</span><span>8:00 AM – 6:00 PM</span></div>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; margin-top:12px;">
+          <div class="dot"></div>
+          <span class="lead" style="font-size:14px;">Text us to reserve your same-day slot.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="section">
+      <div class="card">
+        <h3>Customer Reviews</h3>
+        <p class="lead" style="font-size:14px; margin-top:8px;">Snapshot from Yelp — see full feed on Yelp.</p>
+        <div style="margin-top:10px; background:#0f1a12; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:14px; display:grid; gap:10px;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="font-size:18px; font-weight:800; color:#e9f4ec;">4.9 ★★★★★</div>
+            <div style="color:#9fb4a7; font-size:13px;">Top-rated local pest control</div>
+          </div>
+          <div style="color:#e9f4ec; font-weight:700;">“Showed up same day, rodents gone fast. Professional and clean.”</div>
+          <div style="color:#9fb4a7; font-size:13px;">— Yelp reviewer</div>
+          <a class="btn outline" href="https://www.yelp.com/biz/snaptrap-paramount" target="_blank" rel="noreferrer">Open Yelp Profile</a>
+        </div>
       </div>
     </section>
 
@@ -136,13 +187,33 @@
       </div>
     </section>
 
+    <section id="contact" class="section">
+      <div class="contact-box">
+        <h3>Call or Request a Callback</h3>
+        <div class="form-row">
+          <input id="contact-name" type="text" placeholder="Name" />
+          <input id="contact-phone" type="tel" placeholder="Phone" />
+          <select id="contact-service">
+            <option>Service Needed</option>
+            <option>Rodent removal</option>
+            <option>Insect treatment</option>
+            <option>Specialty service</option>
+          </select>
+          <textarea id="contact-details" rows="3" placeholder="More details (optional): timeline, problem areas, pets on-site"></textarea>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn" type="button" id="btn-text">Text Us</button>
+          <button class="btn outline" type="button" id="btn-email">Email Us</button>
+          <a class="btn outline" href="tel:5622775497">Call Now</a>
+        </div>
+      </div>
+    </section>
+
     <section id="privacy" class="section">
       <div class="card">
         <h3>Privacy Policy</h3>
         <p class="lead" style="font-size:14px; margin-top:8px;">We collect personal information only when you provide it to request service. Data is used to process service requests, improve support, and send updates you opt into. We do not sell or rent your information.</p>
         <p class="lead" style="font-size:14px; margin-top:8px;">Third-party service providers may receive your details only as needed to complete your service. You can refuse to provide information, but some site features may not work without it.</p>
-        <p class="lead" style="font-size:14px; margin-top:8px;">For questions, contact Mario Aguiar at <a href="mailto:snaprodentandpest@gmail.com">snaprodentandpest@gmail.com</a> or call <a href="tel:5622775497">(562) 277-5497</a>.</p>
-      </div>
     </section>
   </main>
 
@@ -163,15 +234,15 @@
     const copy = {
       rodents: {
         title: 'Rodents',
-        body: 'Mice and rat trapping, exclusion, attic/basement sanitizing, entry sealing, same-day setups.'
+        body: 'We inspect entry points, set tamper-safe traps, seal gaps/vents, and sanitize attics/basements if needed. Includes follow-up visit to remove traps and recheck seals.'
       },
       insects: {
         title: 'Insects',
-        body: 'Fleas, bed bugs, ants, roaches, spiders, mosquitoes. Pet-safe treatments, perimeter barrier plus interior flush-out.'
+        body: 'Ants/roaches/spiders/mosquitoes/bed bugs: interior flush-out + exterior perimeter barrier, pet-safe products, and crack/crevice treatment. We target nests/harborage and return if activity rebounds.'
       },
       specialty: {
         title: 'Specialty',
-        body: 'Termite monitoring, wasp and bee removal, wildlife capture, mosquito reduction.'
+        body: 'Termites: monitor + spot treat. Wasps/Bees: remove nests and treat return spots. Wildlife: humane capture and exclusion. Always includes photo proof of work.'
       }
     };
 
@@ -187,6 +258,43 @@
     modalClose.addEventListener('click', () => modal.classList.remove('active'));
     modal.addEventListener('click', (e) => {
       if (e.target === modal) modal.classList.remove('active');
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') modal.classList.remove('active');
+    });
+
+    // Contact actions: send SMS or email with form details
+    const nameInput = document.getElementById('contact-name');
+    const phoneInput = document.getElementById('contact-phone');
+    const serviceInput = document.getElementById('contact-service');
+    const detailsInput = document.getElementById('contact-details');
+    const btnText = document.getElementById('btn-text');
+    const btnEmail = document.getElementById('btn-email');
+
+    function buildMessage() {
+      const name = (nameInput.value || '').trim();
+      const phone = (phoneInput.value || '').trim();
+      const service = serviceInput.value === 'Service Needed' ? '' : serviceInput.value;
+      const details = (detailsInput.value || '').trim();
+      const lines = [
+        name ? `Name: ${name}` : '',
+        phone ? `Phone: ${phone}` : '',
+        service ? `Service: ${service}` : '',
+        details ? `Details: ${details}` : ''
+      ].filter(Boolean);
+      return lines.join('%0A'); // URL-encoded newline
+    }
+
+    btnText.addEventListener('click', () => {
+      const msg = buildMessage() || 'Service request';
+      window.location.href = `sms:5622775497?body=${msg}`;
+    });
+
+    btnEmail.addEventListener('click', () => {
+      const msg = buildMessage() || 'Service request';
+      const subject = encodeURIComponent('Service Request - Snap Trap');
+      const body = msg.replace(/%0A/g, '%0D%0A'); // CRLF for email
+      window.location.href = `mailto:snaprodentandpest@gmail.com?subject=${subject}&body=${body}`;
     });
   </script>
 </body>

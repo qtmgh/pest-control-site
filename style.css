@@ -35,19 +35,17 @@ header {
 }
 .logo {
   display:flex; align-items:center; gap:12px; font-weight:700; font-size:20px;
-  position:relative; padding-left:50px;
+  position:relative; padding-left:52px;
 }
 .logo::before {
   content:"";
   position:absolute; left:0; top:50%; transform:translateY(-50%);
-  width:42px; height:42px;
-  border-radius:12px;
-  background:
-    linear-gradient(120deg, rgba(28,124,84,0.75), rgba(17,83,54,0.65)),
-    url('https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg');
-  background-size:cover;
-  box-shadow:0 10px 25px rgba(0,0,0,0.18);
-  opacity:0.9;
+  width:44px; height:44px;
+  border-radius:50%;
+  background:url('snaptrap-logo.png') center/cover no-repeat;
+  clip-path:circle(50%);
+  box-shadow:0 8px 18px rgba(0,0,0,0.22);
+  border:1px solid rgba(255,255,255,0.1);
 }
 .nav-links { display:flex; gap:18px; font-weight:600; }
 .btn {
@@ -143,14 +141,37 @@ video { width:100%; border-radius:14px; box-shadow:var(--shadow); }
 .embed p { margin:0 0 6px; }
 .embed strong { margin:0; }
 
+.hours-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:12px;
+  margin-top:12px;
+}
+.hours-item {
+  padding:12px;
+  border-radius:12px;
+  background:var(--card-2);
+  border:var(--border);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  color:var(--text);
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.hours-item:hover { transform:translateY(-2px); box-shadow:0 14px 28px rgba(0,0,0,0.2); }
+.dot {
+  width:10px; height:10px; border-radius:50%; background:#48d597; box-shadow:0 0 10px rgba(72,213,151,0.6);
+}
+
 .contact-box {
   background:var(--card-2); border-radius:20px; padding:24px; box-shadow:var(--shadow);
   display:grid; gap:16px; border:var(--border);
 }
 .form-row { display:grid; gap:12px; }
-input, select {
+input, select, textarea {
   width:100%; padding:14px; border-radius:12px; border:1px solid rgba(255,255,255,0.12);
   font-size:16px; font-weight:600; background:#0f1a12; color:var(--text);
+  resize:vertical;
 }
 .hours { color:var(--muted); font-weight:700; }
 .phone-large { font-size:24px; font-weight:800; color:var(--green-dark); }
