@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -12,24 +12,24 @@
 <body>
   <header>
     <nav class="nav">
-      <div class="logo">Snap Trap Pest Control</div>
+      <div class="logo">SnapTrap</div>
       <div class="nav-links">
         <a href="#hero">Home</a>
         <a href="#services">Services</a>
+        <a href="#quiz">Get Matched</a>
         <a href="#pricing">Pricing</a>
         <a href="#reviews">Reviews</a>
         <a href="#contact">Contact</a>
       </div>
-      
     </nav>
   </header>
 
   <main>
     <section id="hero" class="section hero">
       <div>
-        <div class="tag">Pests. Gone. — re-service is free if they’re not.</div>
-        <h1>Same-day inspection. No long contracts.</h1>
-        <p class="lead">SnapTrap offers a solution for any household pest problem.​ Rodent trapping and exclusion. Cleaning, sanitation. ants, spiders, roaches, bed bugs, silverfish.</p>
+        <div class="tag">Pests gone in 24 hours — re-service is free if they’re not.</div>
+        <h1>No Long Contracts.</h1>
+        <p class="lead">SnapTrap handles rodents, insects, and specialty pests with trapping, exclusion, and sanitation—fast, clean, and photo-documented.</p>
         <div class="langs">English | Español</div>
         <div class="social-inline">
           <a class="social-tt" href="https://www.tiktok.com/@tiktok" target="_blank" rel="noreferrer" aria-label="TikTok">
@@ -44,13 +44,12 @@
           </a>
         </div>
         <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:10px;">
-          <a class="btn" href="tel:5622775497">Call: (562) 277-5497</a>
+          <a class="btn" href="tel:5622775497">Call Now</a>
           <a class="btn outline" href="#pricing">View Pricing</a>
         </div>
       </div>
       <div class="hero-media">
         <div class="hero-badges">
-          <div class="badge">Same Day Inspection</div>
           <div class="badge">Family Owned</div>
           <div class="badge">No Long Contracts</div>
         </div>
@@ -60,22 +59,49 @@
     <section id="services" class="section">
       <div class="grid services">
         <div class="card">
-          <div class="icon-circle"><span aria-hidden="true">🐭</span></div>
+          <div class="icon-circle"><img class="icon-photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Hydrochoeris_hydrochaeris_in_Brazil_in_Petr%C3%B3polis%2C_Rio_de_Janeiro%2C_Brazil_09.jpg/330px-Hydrochoeris_hydrochaeris_in_Brazil_in_Petr%C3%B3polis%2C_Rio_de_Janeiro%2C_Brazil_09.jpg" alt="Rodent removal"></div>
           <h3>Rodents</h3>
           <p class="lead" style="font-size:15px;">Mice and rat control, attic/basement clean-outs.</p>
           <button class="btn" data-modal="rodents">Learn More</button>
         </div>
         <div class="card">
-          <div class="icon-circle"><span aria-hidden="true">🪳</span></div>
+          <div class="icon-circle"><img class="icon-photo" src="https://www.nps.gov/ever/learn/nature/images/EVER_Arthropods_NPSbyFedericoAcevedo-15-of-65.jpg" alt="Insect treatment"></div>
           <h3>Insects</h3>
           <p class="lead" style="font-size:15px;">Fleas, bed bugs, ants, roaches, spiders, mosquitoes.</p>
           <button class="btn" data-modal="insects">Learn More</button>
         </div>
         <div class="card">
-          <div class="icon-circle"><span aria-hidden="true">🐝</span></div>
+          <div class="icon-circle"><img class="icon-photo" src="https://upload.wikimedia.org/wikipedia/commons/1/11/The_Lone_Pollinator.jpg" alt="Specialty services"></div>
           <h3>Specialty</h3>
           <p class="lead" style="font-size:15px;">Termites, wasps and bees, wildlife exclusion.</p>
           <button class="btn" data-modal="specialty">Learn More</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz" class="section">
+      <div class="card">
+        <h3>Get Matched</h3>
+        <p class="lead" style="font-size:14px; margin-top:6px;">Two quick choices to prefill your request.</p>
+        <div class="quiz-group">
+          <div class="quiz-label">What’s the issue?</div>
+          <div class="quiz-options" id="quiz-issue">
+            <button type="button" data-issue="Rodent removal" class="quiz-option active">Rodents</button>
+            <button type="button" data-issue="Insect treatment" class="quiz-option">Insects</button>
+            <button type="button" data-issue="Specialty service" class="quiz-option">Termites/Bees/Wildlife</button>
+          </div>
+        </div>
+        <div class="quiz-group">
+          <div class="quiz-label">How soon?</div>
+          <div class="quiz-options" id="quiz-urgency">
+            <button type="button" data-urgency="Same-day requested" class="quiz-option active">Today</button>
+            <button type="button" data-urgency="Within 48 hours" class="quiz-option">This week</button>
+            <button type="button" data-urgency="Routine visit" class="quiz-option">Next available</button>
+          </div>
+        </div>
+        <p id="service-blurb" class="lead" style="font-size:14px; margin-top:10px;">Rodents: traps + exclusion + sanitizing. Great for mice/rats in attic or garage.</p>
+        <div style="margin-top:10px;">
+          <button class="btn outline" type="button" id="quiz-apply">Apply to form</button>
         </div>
       </div>
     </section>
@@ -88,7 +114,6 @@
           <p class="lead" style="font-size:15px;">Credited toward first service.</p>
           <div class="chips">
             <div class="chip">Expert Tech</div>
-            <div class="chip">Same Day</div>
             <div class="chip">Photos Included</div>
           </div>
         </div>
@@ -108,34 +133,23 @@
             <div class="chip">House flies</div>
           </div>
           <p class="lead" style="font-size:14px; margin-top:10px;">Note: More time between visits means more pest activity. Single follow-up for a specific issue is available; full property re-treats are not included.</p>
-          
         </div>
       </div>
-      <div class="card" style="margin-top:16px;">
-        <h4>Specialized treatments (additional charges)</h4>
-        <p class="lead" style="font-size:14px; margin-top:6px;">Fleas/Ticks, Bed Bugs, Termites, Bees, Mites, Pantry Pests.</p>
-      </div>
-      <div class="card" style="margin-top:16px;">
-        <h4>FAQs</h4>
-        <details style="margin-top:8px;">
-          <summary style="cursor:pointer; font-weight:700;">Do you guarantee results?</summary>
-          <p class="lead" style="font-size:14px; margin-top:6px;">Yes—if pests return between visits, we re-service the specific issue for free.</p>
-        </details>
-        <details style="margin-top:8px;">
-          <summary style="cursor:pointer; font-weight:700;">Is the inspection applied to service?</summary>
-          <p class="lead" style="font-size:14px; margin-top:6px;">The $75 inspection is credited to your first treatment when you proceed.</p>
-        </details>
-        <details style="margin-top:8px;">
-          <summary style="cursor:pointer; font-weight:700;">What areas do you treat?</summary>
-          <p class="lead" style="font-size:14px; margin-top:6px;">Interior, exterior perimeter, entry points, attics, and crawlspaces as needed.</p>
-        </details>
+      <div class="card" style="margin-top:16px; border:2px solid #e57f7f;">
+        <h4 style="color:#e57f7f;">Specialized treatments (additional charges)</h4>
+        <p class="lead" style="font-size:14px; margin-top:6px; color:#e9f4ec;">Fleas/Ticks, Bed Bugs, Termites, Bees, Mites, Pantry Pests.</p>
+        <p class="lead" style="font-size:13px; margin-top:6px; color:#e57f7f;">These services are quoted separately due to specialized materials and time.</p>
       </div>
     </section>
 
     <section id="hours" class="section">
       <div class="card">
         <h3>Operating Hours</h3>
-        <p class="lead" style="font-size:14px; margin-top:8px;">Same-day and after-hours available—call to check slot availability.</p>
+        <p class="lead" style="font-size:14px; margin-top:8px;">Same-day and after-hours available—call to check slot availability. Holidays may affect these hours!</p>
+        <div id="open-status" class="status-badge status-closed" style="margin-top:8px;">
+          <span class="status-pulse"></span>
+          <span>Checking availability…</span>
+        </div>
         <div class="hours-grid">
           <div class="hours-item"><span>Mon</span><span>9:00 AM – 5:00 PM</span></div>
           <div class="hours-item"><span>Tue</span><span>9:00 AM – 5:00 PM</span></div>
@@ -145,26 +159,6 @@
           <div class="hours-item"><span>Sat</span><span>8:00 AM – 6:00 PM</span></div>
           <div class="hours-item"><span>Sun</span><span>8:00 AM – 6:00 PM</span></div>
         </div>
-        <div style="display:flex; align-items:center; gap:10px; margin-top:12px;">
-          <div class="dot"></div>
-          <span class="lead" style="font-size:14px;">Text us to reserve your same-day slot.</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="reviews" class="section">
-      <div class="card">
-        <h3>Customer Reviews</h3>
-        <p class="lead" style="font-size:14px; margin-top:8px;">Snapshot from Yelp — see full feed on Yelp.</p>
-        <div style="margin-top:10px; background:#0f1a12; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:14px; display:grid; gap:10px;">
-          <div style="display:flex; align-items:center; gap:10px;">
-            <div style="font-size:18px; font-weight:800; color:#e9f4ec;">4.9 ★★★★★</div>
-            <div style="color:#9fb4a7; font-size:13px;">Top-rated local pest control</div>
-          </div>
-          <div style="color:#e9f4ec; font-weight:700;">“Showed up same day, rodents gone fast. Professional and clean.”</div>
-          <div style="color:#9fb4a7; font-size:13px;">— Yelp reviewer</div>
-          <a class="btn outline" href="https://www.yelp.com/biz/snaptrap-paramount" target="_blank" rel="noreferrer">Open Yelp Profile</a>
-        </div>
       </div>
     </section>
 
@@ -172,17 +166,29 @@
       <div class="grid social-embeds">
         <div class="embed">
           <strong>TikTok</strong>
-          <p class="lead" style="font-size:14px;">Placeholder feed using @nike (swap with your handle).</p>
-          <div style="background:#0f1a12; border:1px solid rgba(255,255,255,0.08); border-radius:12px; height:500px; overflow:hidden;">
-            <iframe src="https://www.tiktok.com/embed/@nike" style="border:0; width:100%; height:500px;" title="TikTok feed placeholder" loading="lazy"></iframe>
+          <p class="lead" style="font-size:14px;"></p>
+          <div style="background:#0f1a12; border:1px solid rgba(255,255,255,0.08); border-radius:12px; height:500px; overflow:hidden; position:relative;">
+            <iframe id="tt-frame" src="https://www.tiktok.com/embed/@marioaguiar54" style="border:0; width:100%; height:500px;" title="TikTok feed" loading="lazy"></iframe>
           </div>
         </div>
         <div class="embed">
-          <strong>Instagram</strong>
-          <p class="lead" style="font-size:14px;">Placeholder feed using @natgeo (swap with your handle).</p>
-          <div style="background:#0f1a12; border:1px solid rgba(255,255,255,0.08); border-radius:12px; height:500px; overflow:hidden;">
-            <iframe src="https://www.instagram.com/natgeo/embed" style="border:0; width:100%; height:500px;" title="Instagram feed placeholder" loading="lazy"></iframe>
+          <strong>Facebook</strong>
+          <p class="lead" style="font-size:14px;"></p>
+          <div style="background:#0f1a12; border:1px solid rgba(255,255,255,0.08); border-radius:12px; height:500px; overflow:hidden; position:relative;">
+            <iframe id="fb-frame" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsnaptrappestcontrol1&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" style="border:0; width:100%; height:500px;" title="Facebook feed" loading="lazy"></iframe>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="section">
+      <div class="card">
+        <h3>Customer Reviews</h3>
+        <p class="lead" style="font-size:14px; margin-top:8px;">See our real-time Yelp profile.</p>
+        <div style="margin-top:10px; background:#0c1324; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:14px; display:grid; gap:10px;">
+          <div style="font-size:18px; font-weight:800; color:#e9f4ec;">Find us on Yelp</div>
+          <div style="color:#9fb4a7; font-size:13px;">Tap through to view live ratings, photos, and reviews.</div>
+          <a class="btn outline" href="https://www.yelp.com/biz/snaptrap-paramount" target="_blank" rel="noreferrer">Open Yelp Profile</a>
         </div>
       </div>
     </section>
@@ -202,10 +208,9 @@
           <textarea id="contact-details" rows="3" placeholder="More details (optional): timeline, problem areas, pets on-site"></textarea>
         </div>
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <button class="btn" type="button" id="btn-text">Text Us</button>
-          <button class="btn outline" type="button" id="btn-email">Email Us</button>
-          <a class="btn outline" href="tel:5622775497">Call Now</a>
+          <button class="btn" type="button" id="btn-submit">Send Request</button>
         </div>
+        <div class="hours">Address: 16707 Garfield Ave, Paramount, CA 90723</div>
       </div>
     </section>
 
@@ -214,6 +219,8 @@
         <h3>Privacy Policy</h3>
         <p class="lead" style="font-size:14px; margin-top:8px;">We collect personal information only when you provide it to request service. Data is used to process service requests, improve support, and send updates you opt into. We do not sell or rent your information.</p>
         <p class="lead" style="font-size:14px; margin-top:8px;">Third-party service providers may receive your details only as needed to complete your service. You can refuse to provide information, but some site features may not work without it.</p>
+        <p class="lead" style="font-size:14px; margin-top:8px;">For questions, contact Mario Aguiar at <a href="mailto:snaprodentandpest@gmail.com">snaprodentandpest@gmail.com</a>.</p>
+      </div>
     </section>
   </main>
 
@@ -225,77 +232,8 @@
     </div>
   </div>
 
-  <script>
-    const modal = document.getElementById('modal');
-    const modalTitle = document.getElementById('modal-title');
-    const modalBody = document.getElementById('modal-body');
-    const modalClose = document.getElementById('modal-close');
+  <div id="toast" aria-live="polite"></div>
 
-    const copy = {
-      rodents: {
-        title: 'Rodents',
-        body: 'We inspect entry points, set tamper-safe traps, seal gaps/vents, and sanitize attics/basements if needed. Includes follow-up visit to remove traps and recheck seals.'
-      },
-      insects: {
-        title: 'Insects',
-        body: 'Ants/roaches/spiders/mosquitoes/bed bugs: interior flush-out + exterior perimeter barrier, pet-safe products, and crack/crevice treatment. We target nests/harborage and return if activity rebounds.'
-      },
-      specialty: {
-        title: 'Specialty',
-        body: 'Termites: monitor + spot treat. Wasps/Bees: remove nests and treat return spots. Wildlife: humane capture and exclusion. Always includes photo proof of work.'
-      }
-    };
-
-    document.querySelectorAll('[data-modal]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const key = btn.dataset.modal;
-        modalTitle.textContent = copy[key].title;
-        modalBody.textContent = copy[key].body;
-        modal.classList.add('active');
-      });
-    });
-
-    modalClose.addEventListener('click', () => modal.classList.remove('active'));
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) modal.classList.remove('active');
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') modal.classList.remove('active');
-    });
-
-    // Contact actions: send SMS or email with form details
-    const nameInput = document.getElementById('contact-name');
-    const phoneInput = document.getElementById('contact-phone');
-    const serviceInput = document.getElementById('contact-service');
-    const detailsInput = document.getElementById('contact-details');
-    const btnText = document.getElementById('btn-text');
-    const btnEmail = document.getElementById('btn-email');
-
-    function buildMessage() {
-      const name = (nameInput.value || '').trim();
-      const phone = (phoneInput.value || '').trim();
-      const service = serviceInput.value === 'Service Needed' ? '' : serviceInput.value;
-      const details = (detailsInput.value || '').trim();
-      const lines = [
-        name ? `Name: ${name}` : '',
-        phone ? `Phone: ${phone}` : '',
-        service ? `Service: ${service}` : '',
-        details ? `Details: ${details}` : ''
-      ].filter(Boolean);
-      return lines.join('%0A'); // URL-encoded newline
-    }
-
-    btnText.addEventListener('click', () => {
-      const msg = buildMessage() || 'Service request';
-      window.location.href = `sms:5622775497?body=${msg}`;
-    });
-
-    btnEmail.addEventListener('click', () => {
-      const msg = buildMessage() || 'Service request';
-      const subject = encodeURIComponent('Service Request - Snap Trap');
-      const body = msg.replace(/%0A/g, '%0D%0A'); // CRLF for email
-      window.location.href = `mailto:snaprodentandpest@gmail.com?subject=${subject}&body=${body}`;
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
