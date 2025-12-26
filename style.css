@@ -82,6 +82,7 @@ p.lead { color:var(--muted); font-size:18px; }
 .social-ig { background:#e1306c; }
 .social-tt { background:#000; color:#fff; }
 .social-tt svg { filter: drop-shadow(0 0 3px rgba(57,255,231,0.6)); }
+.social-fb { background:#1877f2; }
 
 .hero-media {
   background:url('https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg') center/cover;
