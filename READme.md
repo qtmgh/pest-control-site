@@ -22,6 +22,7 @@ This project provides a modern site for the business owner while offering learni
 ## Tech Stack
 - HTML
 - CSS
+- Javascript
 
 ## Assets Needed
 - Logo
