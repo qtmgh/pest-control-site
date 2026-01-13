@@ -79,13 +79,13 @@ const API_BASE = 'http://127.0.0.1:8000';
 
 // Availability logic
 const hoursMap = {
-  0: { open: 8, close: 18 }, // Sunday
-  1: { open: 9, close: 17 },
-  2: { open: 9, close: 17 },
-  3: { open: 9, close: 17 },
-  4: { open: 9, close: 17 },
-  5: { open: 8, close: 18 },
-  6: { open: 8, close: 18 },
+  0: { open: null, close: null }, // Sunday closed
+  1: { open: 9, close: 18 },
+  2: { open: 9, close: 18 },
+  3: { open: 9, close: 18 },
+  4: { open: 9, close: 18 },
+  5: { open: 9, close: 18 },
+  6: { open: 9, close: 18 },
 };
 function clientOpenStatus() {
   if (!openStatus) return;
@@ -93,7 +93,7 @@ function clientOpenStatus() {
   const day = now.getDay();
   const hour = now.getHours() + now.getMinutes() / 60;
   const { open, close } = hoursMap[day] || { open: 9, close: 17 };
-  const isOpen = hour >= open && hour < close;
+  const isOpen = typeof open === 'number' && typeof close === 'number' && hour >= open && hour < close;
   setStatusBadge(isOpen ? 'We are OPEN now.' : 'We are CLOSED now.', isOpen);
 }
 
@@ -156,7 +156,7 @@ quizApply?.addEventListener('click', () => {
   if (serviceInput && issue) serviceInput.value = issue;
   if (detailsInput) {
     const existing = (detailsInput.value || '').trim();
-    const line = [issue, urgency].filter(Boolean).join(' — ');
+    const line = [issue, urgency].filter(Boolean).join(' - ');
     detailsInput.value = existing ? `${existing}\n${line}` : line;
   }
   showToast('Quiz applied to form');
@@ -206,12 +206,14 @@ btnSubmit?.addEventListener('click', async () => {
   const msg = buildMessageEncoded() || 'Service request';
   const subject = encodeURIComponent('Service Request - Snap Trap');
   const body = msg.replace(/%0A/g, '%0D%0A');
-  showToast('Opening your email app…');
+  showToast('Opening your email app...');
   window.location.href = `mailto:snaprodentandpest@gmail.com?subject=${subject}&body=${body}`;
 });
 
 // Repair hero accents if ever corrupted
 const tagEl = document.querySelector('.tag');
-if (tagEl && tagEl.textContent && tagEl.textContent.includes('ƒ')) {
-  tagEl.textContent = 'Pests gone in 24 hours — re-service is free if they’re not.';
+if (tagEl && tagEl.textContent && tagEl.textContent.includes('’')) {
+  tagEl.textContent = "Pests gone in 24 hours - re-service is free if they're not.";
 }
+
+
