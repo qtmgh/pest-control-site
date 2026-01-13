@@ -33,5 +33,4 @@ This project provides a modern site for the business owner while offering learni
 - Contact information
 
 ## Status
-Active development.
-
+Completed.
