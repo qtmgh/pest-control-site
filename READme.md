@@ -24,14 +24,5 @@ This project provides a modern site for the business owner while offering learni
 - CSS
 - Javascript
 
-## Assets Needed
-- Logo
-- Photos of completed jobs
-- Team photos
-- Social media links
-- Service descriptions
-- Business hours
-- Contact information
-
 ## Status
 Completed.
