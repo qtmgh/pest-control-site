@@ -213,7 +213,6 @@ btnSubmit?.addEventListener('click', async () => {
 // Repair hero accents if ever corrupted
 const tagEl = document.querySelector('.tag');
 if (tagEl && tagEl.textContent && tagEl.textContent.includes('’')) {
-  tagEl.textContent = "Pests gone in 24 hours - re-service is free if they're not.";
+  tagEl.textContent = "Fast response and reliable service.";
 }
-
 
