@@ -215,4 +215,3 @@ const tagEl = document.querySelector('.tag');
 if (tagEl && tagEl.textContent && tagEl.textContent.includes('’')) {
   tagEl.textContent = "Fast response and reliable service.";
 }
-

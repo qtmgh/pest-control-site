@@ -14,7 +14,7 @@
 
 * { box-sizing:border-box; margin:0; padding:0; }
 body {
-  font-family:'Barlow', 'Space Grotesk', sans-serif;
+  font-family:'Manrope', sans-serif;
   background:radial-gradient(120% 120% at 20% 20%, #1b2943, #0e1422 60%, #0b111d 100%);
   color:var(--text);
   line-height:1.5;
@@ -36,6 +36,7 @@ header {
 .logo {
   display:flex; align-items:center; gap:12px; font-weight:700; font-size:20px;
   position:relative; padding-left:52px;
+  font-family:'Sora', sans-serif;
 }
 .logo::before {
   content:"";
@@ -67,6 +68,7 @@ header {
 }
 .tag { display:inline-flex; gap:8px; align-items:center; background:var(--accent); color:var(--green-dark); padding:8px 12px; border-radius:999px; font-weight:700; border:var(--border); }
 h1 { font-size:48px; line-height:1.05; margin:14px 0; color:var(--text); }
+h1, h2, h3, h4 { font-family:'Sora', sans-serif; letter-spacing:-0.02em; }
 p.lead { color:var(--muted); font-size:18px; }
 .langs { margin:12px 0; font-weight:700; color:var(--text); }
 
@@ -155,11 +157,118 @@ video { width:100%; border-radius:14px; box-shadow:var(--shadow); }
 }
 .embed-frame iframe {
   width:100%;
-  height:100%;
+  height:500px;
   border:0;
   display:block;
 }
+.fb-post-embed {
+  min-height:500px;
+}
+.fb-post-embed iframe {
+  height:500px;
+}
 
+.yelp-card {
+  margin-top:10px;
+  background:linear-gradient(145deg, #101b30, #0b1324);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:14px;
+  padding:16px;
+  display:grid;
+  gap:10px;
+}
+.yelp-top {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+.yelp-badge {
+  display:inline-flex;
+  align-items:center;
+  padding:5px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:800;
+  background:rgba(224, 24, 24, 0.16);
+  color:#ff7c7c;
+  border:1px solid rgba(224, 24, 24, 0.4);
+}
+.yelp-stars {
+  color:#ffda75;
+  letter-spacing:1px;
+  font-size:16px;
+  font-weight:800;
+}
+.yelp-title { font-size:20px; font-weight:800; color:#e9f4ec; }
+.yelp-copy { color:#9fb4a7; font-size:14px; }
+.yelp-actions { display:flex; gap:10px; flex-wrap:wrap; }
+.yelp-embed-wrap {
+  background:#0e1628;
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:12px;
+  padding:12px;
+}
+.yelp-embed-wrap .yelp-review {
+  display:block;
+  font-size:13px;
+  line-height:1.45;
+  color:#c9d6e5;
+}
+.yelp-embed-wrap .yelp-review a {
+  color:#ff8f8f;
+  font-weight:700;
+  text-decoration:none;
+}
+.yelp-embed-wrap .yelp-review a:hover {
+  text-decoration:underline;
+}
+.google-reviews-card {
+  margin-top:2px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:12px;
+  padding:12px;
+  display:grid;
+  gap:10px;
+}
+.google-top {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.google-badge {
+  display:inline-flex;
+  align-items:center;
+  padding:5px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:800;
+  background:rgba(66, 133, 244, 0.16);
+  color:#8eb6ff;
+  border:1px solid rgba(66, 133, 244, 0.45);
+}
+.google-stars {
+  color:#ffda75;
+  letter-spacing:1px;
+  font-size:16px;
+  font-weight:800;
+}
+.google-copy {
+  color:#b7c7d8;
+  font-size:14px;
+}
+.google-embed-wrap {
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.08);
+}
+.google-embed-wrap iframe {
+  width:100%;
+  height:280px;
+  border:0;
+  display:block;
+}
 .hours-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
@@ -212,7 +321,7 @@ video { width:100%; border-radius:14px; box-shadow:var(--shadow); }
 .form-row { display:grid; gap:12px; }
 input, select, textarea {
   width:100%; padding:14px; border-radius:12px; border:1px solid rgba(255,255,255,0.12);
-  font-size:16px; font-family:Arial, sans-serif; font-weight:600; background:#0c1324; color:var(--text);
+  font-size:16px; font-family:'Manrope', sans-serif; font-weight:600; background:#0c1324; color:var(--text);
   resize:vertical;
 }
 
@@ -240,6 +349,37 @@ input, select, textarea {
 .modals.active { display:flex; }
 .modal-card { background:var(--card-2); color:var(--text); border-radius:18px; padding:22px; max-width:420px; width:100%; box-shadow:var(--shadow); position:relative; border:var(--border); }
 .close { position:absolute; top:10px; right:12px; cursor:pointer; font-weight:800; }
+.pricing-header { margin-bottom:14px; }
+
+.floating-contact {
+  display:flex;
+  position:fixed;
+  right:clamp(24px, 10vw, 160px);
+  bottom:28px;
+  transform:none;
+  width:auto;
+  z-index:30;
+  border-radius:50%;
+  box-shadow:0 16px 32px rgba(0,0,0,0.35);
+}
+.floating-contact-btn {
+  width:74px;
+  height:74px;
+  padding:0;
+  border-radius:50%;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  line-height:1.05;
+  white-space:normal;
+  background:var(--green);
+  color:#fff;
+  font-weight:800;
+  letter-spacing:0;
+  font-size:12px;
+  border:1px solid rgba(255,255,255,0.2);
+}
 
 @media (max-width:900px) {
   .hero { grid-template-columns:1fr; }
@@ -265,6 +405,7 @@ input, select, textarea {
 }
 
 @media (max-width:640px) {
+  body { padding-bottom:74px; }
   .nav { flex-wrap:wrap; gap:8px; }
   .nav-links { width:100%; justify-content:center; flex-wrap:wrap; }
   .nav-links a { font-size:14px; }
@@ -280,8 +421,17 @@ input, select, textarea {
   .icon-circle { width:68px; height:68px; }
   .icon-photo { width:60px; height:60px; }
   .embed-frame { min-height:420px; }
+  .embed-frame iframe { height:420px; }
+  .fb-post-embed { min-height:420px; }
+  .fb-post-embed iframe { height:420px; }
   .hours-grid { grid-template-columns:1fr; }
   .social-embeds { grid-template-columns:1fr; }
+  .floating-contact { right:18px; bottom:12px; }
+  .floating-contact-btn {
+    width:64px;
+    height:64px;
+    font-size:11px;
+  }
 }
 .quiz-group { margin-top:12px; }
 .quiz-label { font-weight:700; color:var(--text); margin-bottom:6px; }
